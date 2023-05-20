@@ -31,7 +31,7 @@
               >
               <input
                 type="text"
-                class="inputBox"
+                class="inputBox form-control"
                 id="cityInput"
                 placeholder="eg. London"
               />
@@ -43,83 +43,28 @@
               </button>
             </div>
             <hr class="hr" />
-            <div class="d-grid gap-2 mb-3">
-              <button class="btn btn-secondary py-3" type="button">
-                Birmingham
-              </button>
-            </div>
-            <div class="d-grid gap-2 mb-3">
-              <button class="btn btn-secondary py-3" type="button">
-                Manchester
-              </button>
-            </div>
-            <div class="d-grid gap-2 mb-3">
-              <button class="btn btn-secondary py-3" type="button">
-                Notingham
-              </button>
-            </div>
-            <div class="d-grid gap-2 mb-3">
-              <button class="btn btn-secondary py-3" type="button">
-                Southam
-              </button>
+            <div id="buttonContainer">
+              <div class="d-grid gap-2 mb-3">
+                <button class="btn btn-secondary py-3" type="button">
+                  Birmingham
+                </button>
+              </div>
             </div>
           </div>
           <div id="weatherContainer" class="col-9">
-            <div class="container border border-dark mt-2 mb-3">
-              <h1 id="weatherCurrentCityName">Altanta 09/13/2022</h1>
-              <h6>temp 70.86</h6>
-              <h6>wind 9.43</h6>
-              <h6>humidity 44%</h6>
+            <div class="container-fluid border border-dark mt-2 mb-3">
+              <h1>Altanta 09/13/2022</h1>
+              <h6 id="first-h6">temp 70.86</h6>
+              <h6 id="second-h6">wind 9.43</h6>
+              <h6 id="third-h6">humidity 44%</h6>
             </div>
             <h2>5-Day Forecast</h2>
-            <div>
-              <div class="row">
-                <div class="col">
-                  <div class="bg-black text-white me-2">
-                    <h4>DATE</h4>
-                    <p>info info</p>
-                    <p>info info</p>
-                    <p>info info</p>
-                    <p>info info</p>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="bg-black text-white me-2">
-                    <h4>DATE</h4>
-                    <p>info info</p>
-                    <p>info info</p>
-                    <p>info info</p>
-                    <p>info info</p>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="bg-black text-white me-2">
-                    <h4>DATE</h4>
-                    <p>info info</p>
-                    <p>info info</p>
-                    <p>info info</p>
-                    <p>info info</p>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="bg-black text-white me-2">
-                    <h4>DATE</h4>
-                    <p>info info</p>
-                    <p>info info</p>
-                    <p>info info</p>
-                    <p>info info</p>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="bg-black text-white me-2">
-                    <h4>DATE</h4>
-                    <p>info info</p>
-                    <p>info info</p>
-                    <p>info info</p>
-                    <p>info info</p>
-                  </div>
-                </div>
-              </div>
+            
+            <div id="weatherContainerInner" class="row">
+              
+            </div>
+          </div>
+       
             </div>
           </div>
         </div>

@@ -23,8 +23,40 @@ async function fetchWeather() {
       buttonContainer.removeChild(buttonContainer.firstChild);
     }
     
+    for (var i=localHistoryList.length-1; i>=0; i--) {
+      var buttonContainerDiv = document.createElement("div");
+      buttonContainerDiv.classList.add("d-grid", "gap-2", "mb-3");
+      
+      var buttonElement = document.createElement("button");
+      buttonElement.classList.add("btn", "btn-secondary", "py-3", "history-button");
+   
+      buttonElement.textContent = localHistoryList[i];
+
+    
+      buttonElement.setAttribute("data-search", localHistoryList[i]);
+      buttonElement.addEventListener("click", setInputFunction);
+      buttonContainerDiv.appendChild(buttonElement);
+     
+      buttonContainer.appendChild(buttonContainerDiv);
+    }
+  }
+  else {
+    var localHistory = localStorage.getItem("localHistory");
+    if (localHistory === "" || localHistory === null) {
+      localStorage.setItem("localHistory", JSON.stringify([]))
+    }
+    var localHistoryList = JSON.parse(localStorage.getItem("localHistory"));
+    localHistoryList.push(search);
+    if(localHistoryList.length > 7)
+      localHistoryList.shift();
+    localStorage.setItem("localHistory", JSON.stringify(localHistoryList));
+
+    var buttonContainer = document.querySelector("#buttonContainer");
+    while (buttonContainer.firstChild) {
+      buttonContainer.removeChild(buttonContainer.firstChild);
+    }
 
 
 searchBtn.addEventListener("click", fetchWeather);
 
-//fetchCoords();
+
