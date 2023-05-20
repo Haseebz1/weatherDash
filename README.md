@@ -28,5 +28,11 @@ searched in history and user can access quick when press the button. create app 
 
 ## links
 
+https://github.com/Haseebz1/weatherDash.git
+
+
+ https://haseebz1.github.io/weatherDash/
+
 
 ## screenshot
+![Portfolio Image](./assets/screentshot%20of%20weatherDash.png)
